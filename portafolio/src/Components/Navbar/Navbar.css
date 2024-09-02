@@ -1,0 +1,111 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5a6162; 
+    padding: 10px 20px;
+    flex-wrap: wrap; 
+}
+
+.navbar-social, .navbar-links, .navbar-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.navbar-social {
+    flex: 1;
+}
+
+.navbar-logo {
+    flex: 2;
+    text-align: center;
+}
+
+.navbar-links {
+    flex: 3;
+    justify-content: center;
+}
+
+.navbar-actions {
+    flex: 1;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white; 
+    margin: 0 10px;
+    text-decoration: none;
+    position: relative; 
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(69, 69, 220); 
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-logo h1 {
+    color: white; 
+    font-family: 'Star Wars', sans-serif; 
+    margin: 0;
+}
+
+.navbar .fab, .navbar .fas {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .navbar-social, .navbar-links, .navbar-actions {
+        flex-direction: column; 
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar-social, .navbar-links, .navbar-actions {
+        margin-bottom: 10px;
+    }
+
+    .navbar-links a, .navbar-social a, .navbar-actions button {
+        margin: 5px 0;
+    }
+}
+
+  
